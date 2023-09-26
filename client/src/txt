@@ -1,0 +1,223 @@
+// const handleFreq = (event) => {
+  //   console.log("Client", client);
+  //   if (client != "") {
+  //     let url = "";
+  //     url = "http://localhost:8000/clientDetails//managerdashfilterfreq";
+  //     if (event.target.value === "All") {
+  //       url = "http://localhost:8000/clientDetails/managerdashfilterclient";
+  //     }
+  //     axios
+  //       .get(url, {
+  //         params: {
+  //           email: localStorage.getItem("name"),
+  //           Client: client,
+  //           Frequency: event.target.value,
+  //         },
+  //       })
+  //       .then(async (res) => {
+  //         console.log("res", res);
+  //         // setMenu(res.data.clients);
+  //         setttlControl(res.data.controls.length);
+  //         // setttlperform(res.data.perform[0]["totalPerformed"]);
+  //         setpie(res.data.pie);
+  //         // setBar(res.data.bar);
+  //         // setnotperform(res.data.notperform[0]["totalnotPerformed"]);
+  //         setFreq(event.target.value);
+  //         // percentange(res.data.details);
+  //       });
+  //         let percentage = 0;
+  //         let performed = 0;
+  //         let total = 0;
+  //         if (event.target.value === "All") {
+  //           total +=
+  //             details.dailynotperformed +
+  //             details.dailyperformed +
+  //             details.monthlynotperformed +
+  //             details.monthlyperformed +
+  //             details.weeklynotperformed +
+  //             details.weeklyperformed;
+  //           performed +=
+  //             details.dailyperformed +
+  //             details.monthlyperformed +
+  //             details.weeklyperformed;
+  //           percentage = (performed / total) * 100;
+  //         } else if (event.target.value === "Monthly") {
+  //           total += details.monthlynotperformed + details.monthlyperformed;
+  //           performed += details.monthlyperformed;
+  //           percentage = (performed / total) * 100;
+  //         } else if (event.target.value === "Weekly") {
+  //           total += details.weeklynotperformed + details.weeklyperformed;
+  //           performed += details.weeklyperformed;
+  //           percentage = (performed / total) * 100;
+  //         } else if (event.target.value === "Daily") {
+  //           total += details.dailynotperformed + details.dailyperformed;
+  //           performed += details.dailyperformed;
+  //           percentage = (performed / total) * 100;
+  //         }
+  //         console.log("per", percentage);
+  //         setPer(percentage.toFixed(2));
+  //         setTot(total);
+  //         setPerfo(performed);
+  //         setNPerfo(total - performed);
+  //         console.log("chl", per, tot, perfo, nperfo);
+  //         // console.log(res.data.details , "Hello details")
+
+  //     // let percentage = 0;
+  //     // let performed = 0;
+  //     // let total = 0;
+  //     // if (event.target.value === "All") {
+  //     //   total +=
+  //     //     details.dailynotperformed +
+  //     //     details.dailyperformed +
+  //     //     details.monthlynotperformed +
+  //     //     details.monthlyperformed +
+  //     //     details.weeklynotperformed +
+  //     //     details.weeklyperformed;
+  //     //   performed +=
+  //     //     details.dailyperformed +
+  //     //     details.monthlyperformed +
+  //     //     details.weeklyperformed;
+  //     //   percentage = (performed / total) * 100;
+  //     // } else if (event.target.value === "Monthly") {
+  //     //   total += details.monthlynotperformed + details.monthlyperformed;
+  //     //   performed += details.monthlyperformed;
+  //     //   percentage = (performed / total) * 100;
+  //     // } else if (event.target.value === "Weekly") {
+  //     //   total += details.weeklynotperformed + details.weeklyperformed;
+  //     //   performed += details.weeklyperformed;
+  //     //   percentage = (performed / total) * 100;
+  //     // } else if (event.target.value === "Daily") {
+  //     //   total += details.dailynotperformed + details.dailyperformed;
+  //     //   performed += details.dailyperformed;
+  //     //   percentage = (performed / total) * 100;
+  //     // }
+  //     // console.log("per", percentage);
+  //     // setPer(percentage.toFixed(2));
+  //     // setTot(total);
+  //     // setPerfo(performed);
+  //     // setNPerfo(total - performed);
+  //     // console.log("1");
+  //   } else if (client === "" && analyst === "") {
+  //     let url = "";
+  //     url = "http://localhost:8000/clientDetails/managerfilterfreqalone";
+  //     if (event.target.value === "All") {
+  //       url = "http://localhost:8000/clientDetails/managerdash";
+  //     }
+
+  //     axios
+  //       .get(url, {
+  //         params: {
+  //           email: localStorage.getItem("name"),
+  //           // Client: client,
+  //           Frequency: event.target.value,
+  //         },
+  //       })
+  //       .then(async (res) => {
+  //         console.log("res", res);
+  //         // setMenu(res.data.clients);
+  //         setttlControl(res.data.controls.length);
+  //         // setttlperform(res.data.perform[0]["totalPerformed"]);
+  //         setpie(res.data.pie);
+  //         // setBar(res.data.bar);
+  //         // setnotperform(res.data.notperform[0]["totalnotPerformed"]);
+  //         setFreq(event.target.value);
+  //         percentange(res.data.details);
+  //       });
+  //     let percentage = 0;
+  //     let performed = 0;
+  //     let total = 0;
+  //     if (event.target.value === "All") {
+  //       total +=
+  //         details.dailynotperformed +
+  //         details.dailyperformed +
+  //         details.monthlynotperformed +
+  //         details.monthlyperformed +
+  //         details.weeklynotperformed +
+  //         details.weeklyperformed;
+  //       performed +=
+  //         details.dailyperformed +
+  //         details.monthlyperformed +
+  //         details.weeklyperformed;
+  //       percentage = (performed / total) * 100;
+  //     } else if (event.target.value === "Monthly") {
+  //       total += details.monthlynotperformed + details.monthlyperformed;
+  //       performed += details.monthlyperformed;
+  //       percentage = (performed / total) * 100;
+  //     } else if (event.target.value === "Weekly") {
+  //       total += details.weeklynotperformed + details.weeklyperformed;
+  //       performed += details.weeklyperformed;
+  //       percentage = (performed / total) * 100;
+  //     } else if (event.target.value === "Daily") {
+  //       total += details.dailynotperformed + details.dailyperformed;
+  //       performed += details.dailyperformed;
+  //       percentage = (performed / total) * 100;
+  //     }
+  //     console.log("per", percentage);
+  //     setPer(percentage.toFixed(2));
+  //     setTot(total);
+  //     setPerfo(performed);
+  //     setNPerfo(total - performed);
+  //     console.log("2");
+  //   } else if (analyst != "") {
+  //     let url =
+  //       "http://localhost:8000/clientDetails/managerdashfilterfreqanalyst";
+  //     axios
+  //       .get(url, {
+  //         params: {
+  //           email: localStorage.getItem("name"),
+  //           Client: client,
+  //           Frequency: event.target.value,
+  //           User: analyst,
+  //         },
+  //       })
+  //       .then(async (res) => {
+  //         console.log("res", res);
+  //         // setMenu(res.data.clients);
+  //         setttlControl(res.data.controls.length);
+  //         // setttlperform(res.data.perform[0]["totalPerformed"]);
+  //         setpie(res.data.pie);
+  //         // setBar(res.data.bar);
+  //         // setnotperform(res.data.notperform[0]["totalnotPerformed"]);
+  //         setFreq(event.target.value);
+  //         percentange(res.data.details);
+  //       });
+  //     let percentage = 0;
+  //     let performed = 0;
+  //     let total = 0;
+  //     if (freq === "All") {
+  //       total +=
+  //         details.dailynotperformed +
+  //         details.dailyperformed +
+  //         details.monthlynotperformed +
+  //         details.monthlyperformed +
+  //         details.weeklynotperformed +
+  //         details.weeklyperformed;
+  //       performed +=
+  //         details.dailyperformed +
+  //         details.monthlyperformed +
+  //         details.weeklyperformed;
+  //       percentage = (performed / total) * 100;
+  //     } else if (freq === "Monthly") {
+  //       total += details.monthlynotperformed + details.monthlyperformed;
+  //       performed += details.monthlyperformed;
+  //       percentage = (performed / total) * 100;
+  //     } else if (freq === "Weekly") {
+  //       total += details.weeklynotperformed + details.weeklyperformed;
+  //       performed += details.weeklyperformed;
+  //       percentage = (performed / total) * 100;
+  //     } else if (freq === "Daily") {
+  //       total += details.dailynotperformed + details.dailyperformed;
+  //       performed += details.dailyperformed;
+  //       percentage = (performed / total) * 100;
+  //     }
+  //     console.log("per", percentage);
+  //     setPer(percentage.toFixed(2));
+  //     setTot(total);
+  //     setPerfo(performed);
+  //     setNPerfo(total - performed);
+  //     console.log("");
+  //   }
+  // };
+
+
+  
