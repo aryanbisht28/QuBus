@@ -139,12 +139,12 @@ const Index = () => {
                   alignItems: "center",
                 }}
               >
-                <Bar
+                {/* <Bar
                   data={data}
                   options={options}
                   height="5000%"
                   width="8000%"
-                />
+                /> */}
               </div>
             </Card>
           </Grid>
@@ -216,7 +216,7 @@ const Index = () => {
                   alignItems: "center",
                 }}
               >
-                <Pie data={data1} />
+                {/* <Pie data={data1} /> */}
               </div>
             </Card>
           </Grid>

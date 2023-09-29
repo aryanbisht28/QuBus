@@ -97,12 +97,29 @@ const Index = () => {
   }
 
   const rows = [
-    createData("Frozen yoghurt", 159),
-    createData("Ice cream sandwich", 237),
-    createData("Eclair", 262),
-    createData("Cupcake", 305),
-    createData("Gingerbread", 356),
-    
+    createData("A01", 0),
+    createData("A02", 0),
+    createData("A03", 0),
+    createData("A04", 0),
+    createData("A05", 0),
+    createData("A06", 0),
+    createData("A07", 0),
+    createData("A08", 0),
+    createData("A09", 0),
+    createData("A010", 0),
+    createData("A011", 0),
+    createData("A012", 0),
+    createData("A013", 0),
+    createData("A014", 0),
+    createData("A015", 0),
+    createData("A015", 0),
+    createData("A016", 0),
+    createData("A017", 0),
+    createData("A18", 0),
+    createData("A19", 0),
+    createData("A20", 0),
+    createData("A21", 0),
+    createData("A22", 0),
   ];
 
   const columns = [
@@ -399,8 +416,8 @@ const Index = () => {
                 <Table aria-label="customized table" className="scroll">
                   <TableHead>
                     <TableRow>
-                      <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-                      <StyledTableCell align="right">Calories</StyledTableCell>
+                      <StyledTableCell>Folder No.</StyledTableCell>
+                      <StyledTableCell align="right">No. of Files</StyledTableCell>
                      
                  
                     </TableRow>
